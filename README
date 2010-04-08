@@ -1,0 +1,15 @@
+Set Up
+======
+
+To use:
+1. git clone <remote git project location>.git vim
+2. ln -s vim/.vimrc ~/.vimrc
+3. ln -s vim/.vim ~/.vim
+
+The vim set up should be generic for all platforms. Tested with MacVim.
+
+License
+=======
+
+This project is released under the MIT license.
+
