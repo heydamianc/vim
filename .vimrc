@@ -41,6 +41,7 @@ set shiftround     " Round indent to multiple of shiftwidth
 set shiftwidth=2   " Number of spaces for each indent
 set softtabstop=2  " Number of spaces for tab key
 set number         " Line numbers on
+set textwidth=80   " Column width
 
 set formatoptions-=t  " Don't auto-wrap text
 set formatoptions+=corqn
