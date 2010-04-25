@@ -28,7 +28,7 @@ set modeline modelines=5  " Use modelines within first/last 5 lines
 " Get rid of filename.txt~
 set nobackup
 " Where to store swap files
-set directory=~/.vim/backup
+set directory=~/.vim_backup
 
 
 
