@@ -137,7 +137,6 @@ hi Search          guifg=#ffffe0 guibg=#284f28
 hi SpecialChar     guifg=#dca3a3 gui=bold
 hi SpecialComment  guifg=#82a282 gui=bold
 hi Special         guifg=#cfbfaf
-hi SpecialKey      guifg=#9ece9e
 hi Statement       guifg=#e3ceab gui=none
 hi StatusLine      guifg=#313633 guibg=#ccdc90
 hi StatusLineNC    guifg=#2e3330 guibg=#88b090
@@ -297,6 +296,7 @@ if exists("g:zenburn_high_Contrast")
     hi TabLine         guifg=#b6bf98 guibg=#181818 gui=bold
     hi CursorColumn    guifg=#dcdccc guibg=#2b2b2b
     hi NonText         guifg=#404040 gui=bold
+    hi SpecialKey      guifg=#404040 gui=bold
 else
     " Original, lighter background
     hi Normal          guifg=#dcdccc guibg=#3f3f3f
@@ -312,6 +312,7 @@ else
     hi TabLine         guifg=#b6bf98 guibg=#353535 gui=bold
     hi CursorColumn    guifg=#dcdccc guibg=#4f4f4f
     hi NonText         guifg=#5b605e gui=bold
+    hi SpecialKey      guifg=#5b605e gui=bold
 endif
 
 
