@@ -247,6 +247,9 @@ augroup module
     autocmd BufRead,BufNewFile *.install set filetype=php
 augroup END
 
+" Use Arduino syntax file for any files ending in .pde
+au BufNewFile,BufRead *.pde setf arduino
+
 " autocmd VimEnter * exe 'NERDTree' | wincmd l "Start NERDTree on load
 
 
