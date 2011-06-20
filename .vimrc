@@ -192,6 +192,10 @@ let autodate_lines = 10
 let NERDSpaceDelims = 1
 let NERDShutUp = 1
 
+" Syntastic plugins
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
 let Tlist_Exit_OnlyWindow = 1 "Think this is suppose to Exist like below
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Inc_Winwidth = 0
