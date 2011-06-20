@@ -55,7 +55,6 @@ set formatoptions+=corqn
 set backspace=indent,eol,start  " Allow backspacing over these
 
 set nowrap     " Do not wrap lines
-" set linebreak  " Break lines at a sensible place
 
 set foldmethod=marker
 
@@ -63,6 +62,9 @@ set foldmethod=marker
 set listchars=tab:▸\ ,eol:¬,trail:·,extends:›,precedes:‹
 let &sbr = nr2char(8618).' '  " Show ↪ at the beginning of wrapped lines
 set list
+
+" Date formatting
+let timestamp_format = '%a %Y-%m-%d %H:%M:%S (%z)'
 
 
 " Searching, Substituting -------------------------------------------------{{{1
@@ -178,17 +180,11 @@ endfunction
 
 " Plugin Settings ---------------------------------------------------------{{{1
 
-let timestamp_format = '%a %Y-%m-%d %H:%M:%S (%z)'
-
 " ToHTML settings
 let html_use_css = 1
 let html_use_encoding = 'utf-8'
 
-let autodate_keyword_pre = 'Last Modified: '
-let autodate_keyword_post = '$'
-let autodate_format = timestamp_format
-let autodate_lines = 10
-
+" NERD Tree
 let NERDSpaceDelims = 1
 let NERDShutUp = 1
 
@@ -196,44 +192,12 @@ let NERDShutUp = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
-let Tlist_Exit_OnlyWindow = 1 "Think this is suppose to Exist like below
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Inc_Winwidth = 0
-let Tlist_Show_One_File = 1
-let Tlist_Auto_Highlight_Tag = 1
-let Tlist_Auto_Update = 1
-let Tlist_Highlight_Tag_On_BufEnter = 1
-let Tlist_Auto_Open = 0 " let the tag list open automagically
-let Tlist_Compact_Format = 1 " show small menu
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags' " location of ctags
-let Tlist_Enable_Fold_Column = 0 " do show folding tree
-let Tlist_Exist_OnlyWindow = 1 " if you are the last, kill yourself
-let Tlist_File_Fold_Auto_Close = 1 " fold closed other trees
-"let Tlist_Sort_Type = "name" " order by
-let Tlist_Use_Right_Window = 1 " split to the right side of the scree
-
-let g:netrw_dirhistmax = 0
-
-let g:snips_author = $USER_FULLNAME
-
-let g:showmarks_enable = 0
-let g:showmarks_textlower = "\t"
-let g:showmarks_textupper = "\t"
-let g:showmarks_textother = "\t"
-
-let g:GPGPreferArmor = 1
-let g:GPGDefaultRecipients = [$GPG_DEFAULT_ID]
+" SuperTab
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>" " Pressing tab calls ctrl+X ctrl+O instead of default (ctrl+N ?)
 
 let g:utl_cfg_hdl_scm_http = 'silent !xdg-open %u'
 let g:utl_cfg_hdl_scm_mailto = g:utl_cfg_hdl_scm_http
 let g:utl_cfg_hdl_mt_handler = 'silent !xdg-open %p'
-
-let g:toggle_words_dict = {'*': [
-    \ ['mon', 'tues', 'wed', 'thurs', 'fri', 'sat', 'sun'],
-    \ ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
-    \ ]}
-
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>" " Pressng tab calls ctrl+X ctrl+O instead of default (ctrl+N ?)
 
 
 
