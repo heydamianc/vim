@@ -183,16 +183,12 @@ endfunction
 let NERDSpaceDelims = 1
 let NERDShutUp = 1
 
-" Syntastic plugins
+" Syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>" " Pressing tab calls ctrl+X ctrl+O instead of default (ctrl+N ?)
-
-let g:utl_cfg_hdl_scm_http = 'silent !xdg-open %u'
-let g:utl_cfg_hdl_scm_mailto = g:utl_cfg_hdl_scm_http
-let g:utl_cfg_hdl_mt_handler = 'silent !xdg-open %p'
 
 
 
@@ -216,4 +212,11 @@ au BufNewFile,BufRead *.pde setf arduino
 syntax on  " Enable syntax highlighting
 
 colorscheme zenburn
+
+
+
+" Pathogen ----------------------------------------------------------------{{{1
+
+source ~/.vim/bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
 

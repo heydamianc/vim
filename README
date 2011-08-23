@@ -3,11 +3,21 @@ Set Up
 
 To use:
 1. git clone <remote git project location>.git vim
-2. ln -s /<full path>/vim/.vimrc ~/.vimrc
-3. ln -s /<full path>/vim/.vim ~/.vim
-4. mkdir ~/.vim_backup
+2. git submodule update --init
+3. ln -s /<full path>/vim/.vimrc ~/.vimrc
+4. ln -s /<full path>/vim/.vim ~/.vim
+5. mkdir ~/.vim_backup
 
-The vim set up should be generic for all platforms. Tested with MacVim.
+The vim set up should be generic for all platforms. Tested with vim, gVim, and MacVim.
+
+Update Plugins
+=================
+
+Plugins are managed using [Pathogen](https://github.com/tpope/vim-pathogen). The
+plugins are referenced as git submodules in the bundle directory.
+
+To update all submodules:
+git submodule foreach git pull
 
 License
 =======
