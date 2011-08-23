@@ -2,6 +2,7 @@
 " Description:   Vim configuration file
 
 
+
 " Misc --------------------------------------------------------------------{{{1
 
 filetype plugin indent on
@@ -23,8 +24,6 @@ set viminfo='1000,<1000,s100,h
 "           |     +------------- Keep N lines for each register
 "           +------------------- Keep marks for N files
 
-set modeline modelines=5  " Use modelines within first/last 5 lines
-
 " Get rid of filename.txt~
 set nobackup
 " Where to store swap files
@@ -42,6 +41,7 @@ set shiftwidth=2   " Number of spaces for each indent
 set softtabstop=2  " Number of spaces for tab key
 set number         " Line numbers on
 set textwidth=80   " Column width
+set nowrap         " Do not wrap lines
 
 set formatoptions-=t  " Don't auto-wrap text
 set formatoptions+=corqn
@@ -54,8 +54,6 @@ set formatoptions+=corqn
 
 set backspace=indent,eol,start  " Allow backspacing over these
 
-set nowrap     " Do not wrap lines
-
 set foldmethod=marker
 
 " Non-text and special key characters
@@ -65,6 +63,7 @@ set list
 
 " Date formatting
 let timestamp_format = '%a %Y-%m-%d %H:%M:%S (%z)'
+
 
 
 " Searching, Substituting -------------------------------------------------{{{1
@@ -180,10 +179,6 @@ endfunction
 
 " Plugin Settings ---------------------------------------------------------{{{1
 
-" ToHTML settings
-let html_use_css = 1
-let html_use_encoding = 'utf-8'
-
 " NERD Tree
 let NERDSpaceDelims = 1
 let NERDShutUp = 1
@@ -209,12 +204,6 @@ augroup misc
     autocmd FileChangedShell * call WarningMsg("File changed outside of vim")
 augroup end
 
-" Register module and install files as PHP for Drupal development
-augroup module
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-augroup END
-
 " Use Arduino syntax file for any files ending in .pde
 au BufNewFile,BufRead *.pde setf arduino
 
@@ -227,6 +216,4 @@ au BufNewFile,BufRead *.pde setf arduino
 syntax on  " Enable syntax highlighting
 
 colorscheme zenburn
-
-
 
