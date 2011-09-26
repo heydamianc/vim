@@ -113,7 +113,6 @@ set numberwidth=1     " Make line number column as narrow as possible
 set lazyredraw        " Don't redraw while executing macros
 set ttyfast           " Indicates a fast terminal connection
 set noerrorbells      " Error bells are annoying
-set vb t_vb=0         " Very annoying, takes a couple times to tell no
 set title             " Set descriptive window/terminal title
 set report=0          " Always report the number of lines changed
 set display=lastline  " Show as much of the last line as possible
